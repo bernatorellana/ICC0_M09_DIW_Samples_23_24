@@ -1,0 +1,29 @@
+html {
+  background-color: #9ac5c5;
+  line-height: 10px;
+  background-image: url(https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+}
+html h1 {
+  font-weight: bold;
+  font-variant: small-caps;
+  font-style: italic;
+}
+html p {
+  margin: 40px;
+  padding: 40px;
+  border: 10px solid red;
+  width: 100px;
+}
+html section.columnes {
+  display: flex;
+}
+html section.columnes div {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
