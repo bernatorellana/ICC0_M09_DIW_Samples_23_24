@@ -1,0 +1,35 @@
+@color_0: #650066;
+@color_1: #cdd8ce;
+@mida:40%;
+main {
+         height:100vh;
+         width:100vw;
+         .yingyang{
+            width: @mida;
+            padding-top: @mida;
+            height: 0%;
+            position:relative; 
+            border:1px solid black;
+            border-radius: 50%;
+            justify-content: center;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, @color_0 0%, @color_0 50%, @color_1 50%, @color_1 100%); 
+            &::after, &::before{
+                content:"";
+                display: block;
+                width: 50%;
+                padding-top: 50%;
+                 height: 0%;
+                 position: absolute;
+                 top:25%;
+                 background: radial-gradient( @color_1 0%, @color_1 20%, @color_0 20%, @color_0 100%); 
+                border-radius: 50%;
+            }
+            &::after{
+
+                left: 50%;
+                background: radial-gradient( @color_0 0%, @color_0 20%, @color_1 20%, @color_1 100%); 
+
+            }
+         }
+}

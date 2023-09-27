@@ -1,13 +1,5 @@
 html {
   background-color: #9ac5c5;
-  line-height: 10px;
-  background-image: url(https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  color: white;
-  font-size: 10px;
   height: 100vh;
 }
 html body {
@@ -23,22 +15,6 @@ html footer,
 html header {
   height: 20px;
   background-color: orange;
-}
-html .triangle {
-  width: 0px;
-  height: 0px;
-  border: 30px solid transparent;
-  border-bottom-color: black;
-}
-html h1 {
-  font-weight: bold;
-  font-variant: small-caps;
-  font-style: italic;
-  font-size: 2em;
-  width: 200em;
-}
-html h1 div {
-  font-size: 2em;
 }
 html p {
   margin: 40px;

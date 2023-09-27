@@ -1,0 +1,129 @@
+
+html#iesmila_org {
+         height:100%;
+
+        .bola{
+          position:relative;
+          margin:0px auto;
+          width: 50px;
+          height: 50px;
+          background-color: red;
+          border-radius: 50%;
+        
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+          background: radial-gradient(ellipse at 30% 30%,  #be3454 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+        }
+
+@alsada_bandera: 10px;  
+@amplada_bandera:  @alsada_bandera * 2.5;
+@mida_franja_blanca: (@alsada_bandera / 20);   
+@alsada_estrella:  @alsada_bandera * 0.8;
+
+      .north_corea_flag{
+        position: relative; // el marca com a pare
+        background-color: white;
+        width: @amplada_bandera;
+        height: @alsada_bandera;
+        border:(@alsada_bandera / 5) solid blue;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        padding-top: @mida_franja_blanca;
+        padding-bottom: @mida_franja_blanca;
+
+        &:before {
+          content:"";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: red;
+        }
+        &:after {          
+          position:absolute;
+          line-height: @alsada_estrella;
+          top:
+             (@alsada_bandera - @alsada_estrella )*0.5 + @mida_franja_blanca;
+          left:(@alsada_estrella / 6);
+             content:"★";
+          text-align: center;
+          font-size:@alsada_estrella;
+          color:red;
+          width: @alsada_estrella;
+          height: @alsada_estrella;
+          background-color: white;
+          border-radius: 50%;
+          display: block;
+        }
+
+      }
+
+        .bola:after, .bola:before{
+          content:"";
+          display: block;
+          position:absolute;
+          bottom:25%;
+          left:55%;
+          width: 20%;
+          height: 20%;    
+          border-radius: 50%; 
+          background-color: rgba(255, 255, 255, 0.455);  
+        }
+        .bola:before{
+          bottom:45%;
+          left:45%;
+        }
+
+
+         table {
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            &:after{
+              content:"+ . + . + . + . + . + . + ";
+              text-align: center;
+              width: 100%;
+              margin:0px auto;
+              margin-bottom: 40px;
+              display: block;
+              
+             }
+
+         }
+         
+
+         h1 {
+            text-align: center;
+            color:red;
+            font-size:2.5em;
+            margin-bottom: 20px;
+         }
+         tr:nth-child(2n){
+            background-color:orange;
+         }
+         tr:nth-child(2n+1){
+            background-color:blue;
+         }
+         tr:first-child{
+            background-color: green; 
+          }
+
+          td {
+            padding: 10px;
+
+          }
+          td:first-child{
+            font-weight: bold;
+            font-size:1.2em;
+          }
+          tr+tr td:first-child:before{
+            content:"#";
+          }
+          /*tr:nth-child(n+2):hover {
+            background-color: aqua;
+          }*/
+          tr+tr:hover {
+            background-color: aqua;
+          }
+}

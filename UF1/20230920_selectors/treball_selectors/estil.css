@@ -1,0 +1,108 @@
+html#iesmila_org {
+  height: 100%;
+  /*tr:nth-child(n+2):hover {
+            background-color: aqua;
+          }*/
+}
+html#iesmila_org .bola {
+  position: relative;
+  margin: 0px auto;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+  background: radial-gradient(ellipse at 30% 30%, #be3454 0%, #8f0222 44%, #6d0019 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+html#iesmila_org .north_corea_flag {
+  position: relative;
+  background-color: white;
+  width: 25px;
+  height: 10px;
+  border: 2px solid blue;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+}
+html#iesmila_org .north_corea_flag:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+html#iesmila_org .north_corea_flag:after {
+  position: absolute;
+  line-height: 8px;
+  top: 1.5px;
+  left: 1.33333333px;
+  content: "★";
+  text-align: center;
+  font-size: 8px;
+  color: red;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  display: block;
+}
+html#iesmila_org .bola:after,
+html#iesmila_org .bola:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 25%;
+  left: 55%;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.455);
+}
+html#iesmila_org .bola:before {
+  bottom: 45%;
+  left: 45%;
+}
+html#iesmila_org table {
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+html#iesmila_org table:after {
+  content: "+ . + . + . + . + . + . + ";
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  margin-bottom: 40px;
+  display: block;
+}
+html#iesmila_org h1 {
+  text-align: center;
+  color: red;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+html#iesmila_org tr:nth-child(2n) {
+  background-color: orange;
+}
+html#iesmila_org tr:nth-child(2n+1) {
+  background-color: blue;
+}
+html#iesmila_org tr:first-child {
+  background-color: green;
+}
+html#iesmila_org td {
+  padding: 10px;
+}
+html#iesmila_org td:first-child {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+html#iesmila_org tr + tr td:first-child:before {
+  content: "#";
+}
+html#iesmila_org tr + tr:hover {
+  background-color: aqua;
+}

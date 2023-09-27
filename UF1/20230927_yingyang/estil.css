@@ -1,0 +1,31 @@
+main {
+  height: 100vh;
+  width: 100vw;
+}
+main .yingyang {
+  width: 40%;
+  padding-top: 40%;
+  height: 0%;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 50%;
+  justify-content: center;
+  background: #020024;
+  background: linear-gradient(180deg, #650066 0%, #650066 50%, #cdd8ce 50%, #cdd8ce 100%);
+}
+main .yingyang::after,
+main .yingyang::before {
+  content: "";
+  display: block;
+  width: 50%;
+  padding-top: 50%;
+  height: 0%;
+  position: absolute;
+  top: 25%;
+  background: radial-gradient(#cdd8ce 0%, #cdd8ce 20%, #650066 20%, #650066 100%);
+  border-radius: 50%;
+}
+main .yingyang::after {
+  left: 50%;
+  background: radial-gradient(#650066 0%, #650066 20%, #cdd8ce 20%, #cdd8ce 100%);
+}
