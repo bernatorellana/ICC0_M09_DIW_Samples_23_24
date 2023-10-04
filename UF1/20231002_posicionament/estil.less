@@ -1,0 +1,35 @@
+
+html {
+         height:100%;
+         body{
+            height: 100%;
+         }
+        main {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .capsa{
+                position: relative;
+                width: 200px;
+                height: 200px;
+                background-color: rebeccapurple;
+                &:after, &:before {
+                    content:"";
+                    display: block;
+                    width: 10%;
+                    height: 25px;
+                    background-color: aqua;
+                    position: absolute;
+                    //top: calc(50% - 12.5px);
+                    top:50%;
+                    transform:translateY(-50%);
+                    left: 100%;
+                }
+                &:before {
+                    left: auto;
+                    right:100%;
+                }
+            }
+        }
+}
