@@ -15,13 +15,23 @@ html main .capsa {
   width: 200px;
   height: 200px;
   background-color: rebeccapurple;
+  /* &:hover:after {
+                    transform:rotate(90deg);
+                    transform-origin:  -90px 10px;
+                }&:hover:before{
+                    transform:rotate(90deg);
+                    transform-origin:  +130px 10px;
+                }
+                &:after, &:before{
+                    transition: 1s all;
+                }*/
 }
 html main .capsa:after,
 html main .capsa:before {
   content: "";
   display: block;
   width: 10%;
-  height: 25px;
+  height: 10%;
   background-color: aqua;
   position: absolute;
   top: 50%;
@@ -31,4 +41,18 @@ html main .capsa:before {
 html main .capsa:before {
   left: auto;
   right: 100%;
+}
+html main .capsa:hover:after {
+  bottom: 100%;
+  top: auto;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+html main .capsa:hover:before {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
 }
