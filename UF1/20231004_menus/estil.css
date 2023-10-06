@@ -6,7 +6,6 @@ html body {
 }
 html body nav {
   background-color: #a5bdd9;
-  border-bottom: 1px solid black;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -16,16 +15,60 @@ html body nav {
 }
 html body nav > ul {
   display: flex;
-  justify-content: space-around;
+  height: 100%;
 }
 html body nav > ul li {
+  font-weight: normal;
+  flex: 1;
+  text-align: center;
   padding: 15px;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+html body nav > ul li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0);
+}
+html body nav > ul li li {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+html body nav > ul li li:hover > ul {
+  opacity: 1;
+  left: 100%;
+}
+html body nav > ul li:hover {
+  font-weight: bold;
+}
+html body nav > ul li:hover:after {
+  background-color: rgba(128, 255, 0, 0.151);
 }
 html body nav > ul li:hover > ul {
-  display: block;
+  opacity: 1;
 }
 html body nav > ul ul {
-  display: none;
+  display: block;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0%;
+  background-color: #cdd3db;
+  -webkit-box-shadow: 9px 10px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 10px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 10px 16px -5px rgba(0, 0, 0, 0.75);
+}
+html body nav > ul ul ul {
+  left: 0%;
+  top: 0%;
+  transition: all 1s;
 }
 html body main {
   font-family: Georgia, 'Times New Roman', Times, serif;
