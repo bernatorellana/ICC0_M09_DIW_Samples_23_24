@@ -1,0 +1,87 @@
+
+html {
+    height:100%;
+
+    div {
+        &:after,&:before {
+            content:"";
+            width: 80px;
+            height: 80px;
+            position:absolute;    
+            top:0px;        
+            background-image: url(celtic_corner.gif);
+            background-size:contain;
+        }
+        &:after{
+            left:0px;
+            transform:rotate(+90deg);
+        }
+        &:before{
+            right:0px;
+            transform:rotate(+180deg);
+        }
+        div{
+            &:after,&:before{
+                top:auto;
+                bottom:0px;
+            }
+            &:after{
+                transform:rotate(+0deg);
+            }
+            &:before{
+                transform:rotate(-90deg);
+            }            
+        }
+    }
+
+
+    .capsa {
+        min-width: 300px;
+        min-height: 80px;
+        width: 40%;
+        position:relative;
+        padding: 15px;
+        margin: 20px;
+        float:left;
+        display: flex;
+        align-items:stretch;
+       
+        div{     
+            height: 100%;    
+            min-height: 80px;   
+            padding: 10% 30%;
+            width: 40%;
+            border:1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                display: block;
+                
+                &:after,&:before {
+                    content:"";
+                    width: 20%;
+                    height: 80px;
+                    position:absolute;    
+                    top:50%;
+                    left: 5%;        
+                    background-image: url(celtic_knot.jpg);
+                    background-size:contain;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    transform:translateY(-50%);
+                }
+                &:before{
+                    left: auto;
+                    right: 5%;  
+                }
+            }
+
+        }
+
+        
+    }
+    .right{
+        float:right;
+    }
+}
