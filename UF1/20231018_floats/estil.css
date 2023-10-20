@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+}
+html img {
+  display: block;
+  float: left;
+  margin: 20px;
+  border-radius: 50%;
+  shape-outside: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+  clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+  transition: 1s all;
+}
+html img:hover {
+  clip-path: polygon(10% 25%, 18% 10%, 35% 0%, 65% 0%, 75% 9%, 90% 25%, 95% 55%, 80% 84%, 65% 100%, 35% 100%, 16% 86%, 10% 50%);
+  shape-outside: polygon(10% 25%, 18% 10%, 35% 0%, 65% 0%, 75% 9%, 90% 25%, 95% 55%, 80% 84%, 65% 100%, 35% 100%, 16% 86%, 10% 50%);
+}
+html .c1 {
+  background-color: aquamarine;
+}
+html .c1,
+html .c2 {
+  float: left;
+  width: 50% ;
+  padding: 20px;
+  box-sizing: border-box;
+}
+html div {
+  background-color: red;
+  overflow: hidden;
+}
