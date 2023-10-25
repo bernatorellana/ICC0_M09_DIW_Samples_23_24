@@ -2,13 +2,98 @@
 html {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 12px;
-   ul{
-      display: flex;
-      justify-content: space-around;
+   min-height: 100vh;
 
-      li{
-         display: block;
-         padding: 15px;
+img {
+   width: 50px;
+   height: 50px;
+}
+   body {
+      overflow:auto;
+         min-height: calc( 100vh - 1px );
+         height: 100%;
+         box-sizing: border-box;
+         display: flex;
+         margin:0px;padding:0px;
+         flex-direction: column;
+         justify-content: space-between;         
+         
+         header {
+            position:relative;
+            .flags{
+               position: absolute;
+               top:0px;
+               right:20px;
+               display: flex;
+               img {
+                  width: 20px;
+                  height: auto; 
+                  padding:5px;                 
+               }
+            }
+         }
+         
+         
+         nav {
+            background-color: rgb(204, 210, 211);
+            ul{
+               display: flex;
+               justify-content: space-around;
+               li{
+                  display: block;
+                  padding: 15px;
+               }
+            }
+         }
+         #principal {
+            display: flex;
+            flex:1;
+            aside, main{
+               padding: 25px;
+               line-height: 15px;
+            }
+            aside{
+               article {
+                  h2{
+                     font-size:20px;
+                     padding-top: 5px;
+                     padding-bottom: 10px;
+                  }
+               }
+            }
+            @columnes:5;
+            @amplada_columna: (100% / @columnes);
+            section {
+               display: flex;
+               flex-wrap: wrap;
+               padding: 30px;
+               row-gap: 10px;
+               column-gap: 10px;
+               article{
+                  flex:calc( @amplada_columna - 10px );
+                  border:1px solid #AAAAAA;
+                  padding: 10px;
+                  box-sizing: border-box;
+                  display: flex;
+                  column-gap: 10px;
+                  h2 {
+                     font-size:15px;
+                     font-weight: bold;
+                  }
+               }
+            }
+         }
+         footer {
+            background-color: rgb(147, 147, 147);
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            ul {
+               li{
+                  display: block;
+                  padding: 5px;
+               }
+            }
+         }
       }
-   }
 }

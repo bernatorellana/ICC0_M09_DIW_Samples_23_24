@@ -1,12 +1,88 @@
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
+  min-height: 100vh;
 }
-html ul {
+html img {
+  width: 50px;
+  height: 50px;
+}
+html body {
+  overflow: auto;
+  min-height: calc(100vh - 1px);
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+html body header {
+  position: relative;
+}
+html body header .flags {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  display: flex;
+}
+html body header .flags img {
+  width: 20px;
+  height: auto;
+  padding: 5px;
+}
+html body nav {
+  background-color: #ccd2d3;
+}
+html body nav ul {
   display: flex;
   justify-content: space-around;
 }
-html ul li {
+html body nav ul li {
   display: block;
   padding: 15px;
+}
+html body #principal {
+  display: flex;
+  flex: 1;
+}
+html body #principal aside,
+html body #principal main {
+  padding: 25px;
+  line-height: 15px;
+}
+html body #principal aside article h2 {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+html body #principal section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+html body #principal section article {
+  flex: calc(20% - 10px);
+  border: 1px solid #AAAAAA;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  column-gap: 10px;
+}
+html body #principal section article h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+html body footer {
+  background-color: #939393;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+html body footer ul li {
+  display: block;
+  padding: 5px;
 }
