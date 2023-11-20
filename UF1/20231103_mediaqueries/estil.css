@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+}
+html main {
+  display: flex;
+  height: 100%;
+}
+html main div:nth-child(1) {
+  background-color: red;
+  width: 75%;
+  height: 100%;
+}
+html main div:nth-child(2) {
+  background-color: green;
+  width: 25%;
+  height: 100%;
+}
+@media screen and (max-width: 800px) {
+  html main {
+    display: block;
+  }
+  html main div:nth-child(1),
+  html main div:nth-child(2) {
+    width: 100%;
+  }
+}

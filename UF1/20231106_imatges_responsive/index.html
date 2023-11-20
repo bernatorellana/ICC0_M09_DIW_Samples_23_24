@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+
+<html>
+	<head>
+	    <title>title</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+		<link rel="stylesheet" type="text/css" href="reset.css" />
+		<link rel="stylesheet" type="text/css" href="estil.css" />
+	</head>
+
+	<body>
+		<main>
+			<!--section class="capsa" style="--imatge:url(https://picsum.photos/800/600?5665)"-->
+      		<section class="capsa">
+				<!--
+				<img class="primera" src="./images/desktop-800x450.jpg"
+				srcset="./images/desktop-800x450.jpg 800w,
+				./images/desktop-1024x576.jpg 1024w,
+				./images/desktop-1680x1050.jpg 1680w"
+				sizes="(min-width: 800px) 33vw,
+				(min-width: 400px) 50vw,
+				100vw"
+				>
+			-->
+
+				<picture>
+					<source srcset="./images/phone-640x1136.jpg" media="(min-width: 1200px)">
+					<source srcset="./images/desktop-1680x1050.jpg" media="(min-width: 800px)">
+					<source srcset="./images/desktop-1024x576.jpg" media="(min-width: 400px)">			  
+					<img  class="segona" src="./images/desktop-800x450.jpg" width="800" height="450">
+				</picture>
+			</section>  
+		</main>		
+	</body>
+</html>

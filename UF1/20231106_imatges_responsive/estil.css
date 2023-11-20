@@ -1,0 +1,22 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body main {
+  height: 100%;
+}
+html body main .capsa {
+  height: 100%;
+  width: 100%;
+}
+html body main .capsa .primera {
+  aspect-ratio: 5/1;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+html body main .capsa .segona {
+  width: 100%;
+  height: auto;
+}

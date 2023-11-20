@@ -1,0 +1,32 @@
+html {
+  height: 100vh;
+}
+html body {
+  height: 100vh;
+}
+html body main {
+  height: 100%;
+}
+html body main .graella {
+  height: 100%;
+  display: grid;
+  grid-template-columns: [linia_inicial] 25fr 75fr 25fr;
+  grid-template-rows: 20px 1fr 20px;
+  grid-template-areas: "header header header" "aside main main" "footer footer footer";
+}
+html body main .graella div {
+  width: 100%;
+  height: 100%;
+}
+html body main .graella div.A {
+  background-color: blue;
+  grid-area: header;
+}
+html body main .graella div.B {
+  background-color: red;
+  grid-area: main;
+}
+html body main .graella div.C {
+  background-color: green;
+  grid-area: footer;
+}

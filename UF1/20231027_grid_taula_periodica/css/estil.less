@@ -1,0 +1,40 @@
+:root{
+    --bgcolor:lime;
+}
+#edu_iesmila_diw{
+
+
+    .fake_image {
+        display: block;
+        width: 100%;
+        height: 200px;
+        background: var(--img-url)  ;
+        background-size: cover;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 200px; 
+        object-fit: cover;
+    }
+
+
+    .taula_periodica{
+        display: grid;
+        grid-template-columns: repeat(18,100px);
+        grid-template-rows: repeat(10,200px);
+        .element {
+            grid-column: var(--columna) / span 1;
+            grid-row:var(--fila) / span 1;
+        }
+
+        /*each(range(18), {
+            .col-@{value} {
+                grid-column: @value / span 1;
+            }
+            .row-@{value} {
+                grid-column: @value / span 1;
+            }
+          });*/
+    }
+}

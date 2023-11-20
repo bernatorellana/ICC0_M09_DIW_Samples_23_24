@@ -1,0 +1,67 @@
+.carrousel {
+  aspect-ratio: 4/1;
+  overflow: hidden;
+  position: relative;
+}
+.carrousel img {
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.carrousel input[type=radio] {
+  display: none;
+}
+.carrousel input[type=radio]:nth-child(1):checked ~ .photos > li:nth-child(1) {
+  display: block;
+}
+.carrousel input[type=radio]:nth-child(1):checked ~ .bullets > li:nth-child(1) b {
+  background-color: black;
+}
+.carrousel input[type=radio]:nth-child(2):checked ~ .photos > li:nth-child(2) {
+  display: block;
+}
+.carrousel input[type=radio]:nth-child(2):checked ~ .bullets > li:nth-child(2) b {
+  background-color: black;
+}
+.carrousel input[type=radio]:nth-child(3):checked ~ .photos > li:nth-child(3) {
+  display: block;
+}
+.carrousel input[type=radio]:nth-child(3):checked ~ .bullets > li:nth-child(3) b {
+  background-color: black;
+}
+.carrousel input[type=radio]:nth-child(4):checked ~ .photos > li:nth-child(4) {
+  display: block;
+}
+.carrousel input[type=radio]:nth-child(4):checked ~ .bullets > li:nth-child(4) b {
+  background-color: black;
+}
+.carrousel input[type=radio]:nth-child(5):checked ~ .photos > li:nth-child(5) {
+  display: block;
+}
+.carrousel input[type=radio]:nth-child(5):checked ~ .bullets > li:nth-child(5) b {
+  background-color: black;
+}
+.carrousel .photos {
+  height: 100%;
+}
+.carrousel .photos li {
+  display: none;
+  height: 100%;
+}
+.carrousel .bullets {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: flex;
+}
+.carrousel .bullets b {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50%;
+  margin: 2px;
+  -webkit-box-shadow: 5px 5px 5px 5px #ffffff;
+  box-shadow: 5px 5px 10px 5px #ffffff;
+}
