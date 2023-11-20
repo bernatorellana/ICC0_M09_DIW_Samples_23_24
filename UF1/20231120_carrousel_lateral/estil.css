@@ -11,47 +11,46 @@
 .carrousel input[type=radio] {
   display: none;
 }
-.carrousel input[type=radio]:nth-child(1):checked ~ .photos > li:nth-child(1) {
-  opacity: 1;
+.carrousel input[type=radio]:nth-child(1):checked ~ .photos {
+  transform: translateX(0%);
 }
 .carrousel input[type=radio]:nth-child(1):checked ~ .bullets > li:nth-child(1) b {
   background-color: black;
 }
-.carrousel input[type=radio]:nth-child(2):checked ~ .photos > li:nth-child(2) {
-  opacity: 1;
+.carrousel input[type=radio]:nth-child(2):checked ~ .photos {
+  transform: translateX(-20%);
 }
 .carrousel input[type=radio]:nth-child(2):checked ~ .bullets > li:nth-child(2) b {
   background-color: black;
 }
-.carrousel input[type=radio]:nth-child(3):checked ~ .photos > li:nth-child(3) {
-  opacity: 1;
+.carrousel input[type=radio]:nth-child(3):checked ~ .photos {
+  transform: translateX(-40%);
 }
 .carrousel input[type=radio]:nth-child(3):checked ~ .bullets > li:nth-child(3) b {
   background-color: black;
 }
-.carrousel input[type=radio]:nth-child(4):checked ~ .photos > li:nth-child(4) {
-  opacity: 1;
+.carrousel input[type=radio]:nth-child(4):checked ~ .photos {
+  transform: translateX(-60%);
 }
 .carrousel input[type=radio]:nth-child(4):checked ~ .bullets > li:nth-child(4) b {
   background-color: black;
 }
-.carrousel input[type=radio]:nth-child(5):checked ~ .photos > li:nth-child(5) {
-  opacity: 1;
+.carrousel input[type=radio]:nth-child(5):checked ~ .photos {
+  transform: translateX(-80%);
 }
 .carrousel input[type=radio]:nth-child(5):checked ~ .bullets > li:nth-child(5) b {
   background-color: black;
 }
 .carrousel .photos {
+  width: 500%;
   position: relative;
   height: 100%;
+  display: flex;
+  transition: transform 2s;
 }
 .carrousel .photos li {
-  position: absolute;
-  top: 0px;
-  left: 0px;
   display: block;
-  opacity: 0;
-  transition: opacity 2s;
+  width: 20%;
   height: 100%;
 }
 .carrousel .bullets {

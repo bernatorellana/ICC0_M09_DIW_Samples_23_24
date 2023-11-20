@@ -1,10 +1,12 @@
+
+@numFotos:5;
+
 // mixin de less
 .generaInputs(@count){
     each(range(1, @count, 1), {
         input[type=radio]:nth-child(@{value}):checked ~ 
-            .photos>li:nth-child(@{value}){
-            //display: block;
-            opacity: 1;
+            .photos {
+            transform:translateX(((@value - 1) * -100% / @numFotos));
         }
         input[type=radio]:nth-child(@{value}):checked ~ 
         .bullets>li:nth-child(@{value}) b{
@@ -26,18 +28,20 @@
     input[type=radio] {
         display: none;
     }
-    .generaInputs(5);
+
+
+
+    .generaInputs(@numFotos);
 
     .photos {
+        width: @numFotos * 100%;
         position: relative;
         height: 100%;
+        display: flex;
+        transition:transform 2s;
         li {
-            position: absolute;
-            top:0px;left:0px;
             display: block;
-            //display: none;
-            opacity: 0;
-            transition:opacity 2s;
+            width: (100% / @numFotos);            
             height: 100%;
         }
     }
