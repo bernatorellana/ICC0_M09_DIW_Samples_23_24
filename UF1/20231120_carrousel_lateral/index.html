@@ -6,6 +6,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="estil.css" />
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	</head>
 
 	<body>
@@ -18,6 +19,7 @@
 				<input id="r4" type="radio" name="grup">
 				<input id="r5" type="radio" name="grup">	
 				
+
 				<ul class="photos">
 					<li><img src="https://picsum.photos/2000/600?1"></li>
 					<li><img src="https://picsum.photos/2000/600?2"></li>
@@ -33,8 +35,8 @@
 					<li><label for="r5"><b></b></label></li>
 				</ul>
 				<ul class="botons">
-					<li>◀</li>
-					<li>▶</li>
+					<li id="btn_left">◀</li>
+					<li  id="btn_right">▶</li>
 				</ul>
 			</section>
 
@@ -46,4 +48,32 @@
 			</section>    
 		</main>		
 	</body>
+	<script>
+		function move(offset){
+			var radios = $( ".carrousel input[type='radio']" );
+			var idxSeleccionat = 0;
+			if ( radios.length ) {
+				for(var i=0;i<radios.length;i++){
+					if(radios[i].checked) {idxSeleccionat=i;break;}
+				}
+				console.log(radios);
+				console.log(idxSeleccionat);
+				console.log(offset);
+				console.log(radios.length);
+				var nouIndex = (idxSeleccionat+offset)%radios.length;
+				if(nouIndex<0) nouIndex = radios.length-1;
+				radios[nouIndex].checked=true;
+			}
+		}
+
+		function moveLeft(){
+			move(-1);
+		}
+		function moveRight(){
+			move(1);
+		}
+		
+		document.getElementById("btn_left").addEventListener("click", moveLeft);
+		document.getElementById("btn_right").addEventListener("click", moveRight);
+	</script>
 </html>

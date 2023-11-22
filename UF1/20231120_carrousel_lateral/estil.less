@@ -62,4 +62,25 @@
             box-shadow: 5px 5px 10px 5px #ffffff;
         }
     }
+    .botons {
+        li {
+            cursor: crosshair;
+            font-size: 25px;
+            display: block;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            width: 50px;
+            height:50px;
+            background-color: #ffffff;
+            top:50%;
+            border-radius: 50%;
+            &:first{
+                left:0px;
+            }
+            &:last-child{
+                right:0px;
+            }
+        }
+    }
 }
