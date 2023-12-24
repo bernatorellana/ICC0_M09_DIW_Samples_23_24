@@ -1,0 +1,22 @@
+#lamevaweb header {
+  background-color: lightblue;
+  padding: 20px;
+}
+#lamevaweb section:nth-child(1) {
+  background-color: antiquewhite;
+}
+#lamevaweb section:nth-child(2) {
+  background-color: #bc9d75;
+}
+#lamevaweb section:nth-child(3) {
+  background-color: #4e3d28;
+}
+#lamevaweb div {
+  outline: 1px solid #333333;
+  background-color: orange;
+}
+#lamevaweb #prova {
+  background-color: aqua;
+  display: flex;
+  aspect-ratio: 3/1;
+}
